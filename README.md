@@ -14,10 +14,21 @@
 Add to `~/.zshrc`:
 
 ```bash
+# Use nerd font
+POWERLEVEL9K_MODE='nerdfont-complete'
+
+# Escape special characters (^)
+setopt NO_NOMATCH
+
 # Aliases
 alias ls="ls -FG"
 alias la="ls -lahFG"
 alias grep="grep --color=auto -iRnH"
+alias gp="git pull"
+alias gs="git s"
+alias gt="git tr"
+alias gd="git diff"
+alias gdc="git diff --cached"
 
 # HSTR configuration - add this to ~/.bashrc
 alias hh=hstr                    # hh to be alias for hstr
