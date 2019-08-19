@@ -29,6 +29,7 @@ alias gs="git s"
 alias gt="git tr"
 alias gd="git diff"
 alias gdc="git diff --cached"
+alias gum="git checkout master && git pull"
 
 # HSTR configuration - add this to ~/.bashrc
 alias hh=hstr                    # hh to be alias for hstr
