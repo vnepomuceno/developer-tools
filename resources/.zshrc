@@ -34,6 +34,8 @@ alias gt="git tr"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gum="git checkout master && git pull"
+alias guq="git checkout qa && git pull"
+alias grep="ggrep --color=auto"
 
 ##############################
 # TERMINAL PLUGINS & CONFIGS #

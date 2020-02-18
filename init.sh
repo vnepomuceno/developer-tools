@@ -35,6 +35,7 @@ fi
 
 brew_install_formula httpie
 brew_install_formula bat
+brew_install_formula grep
 
 if [ $success -eq 0 ]; then
     echo `date` "-> ${RED}[FAILURE]${RST}${RED} Could not finish automatic configuration"
