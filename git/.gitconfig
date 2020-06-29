@@ -1,0 +1,34 @@
+[core]
+	excludesfile = /Users/<user>/.gitignore_global
+	editor = sublime --wait
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = <name>
+	email = <email>
+	signingkey = <gpg_key>
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[color]
+	ui = true
+[color "status"]
+	changed = blue normal
+	untracked = red normal
+	added = magenta normal
+	updated = green normal
+	branch = yellow normal bold
+	header = white normal bold
+[credential]
+	helper = osxkeychain
+[alias]
+	tree1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	tree2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold red)%h%C(reset) - %C(bold green)%s%C(reset) %C(bold blue)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''%C(dim white){ Author: %C(reset)%C(white)%an%C(dim white), Email: %C(reset)%C(white)%ae%C(dim white), Updated at: %C(reset)%C(white)%cd%C(dim white) }%C(reset)' --all
+	tr = !"git tree2"
+	s = status
