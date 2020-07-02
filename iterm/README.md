@@ -15,3 +15,28 @@ Use the command `brew install <formula>` to install the following formulas:
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), fish-like fast / unobtrusive autosuggestions for zsh.
 * [zsh-completions](https://github.com/zsh-users/zsh-completions), additional completion definitions for zsh.
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), fish-like syntax highlighting for zsh.
+
+# Shell Scripts
+
+## Install Brew Formulas
+
+In the root of the project run the `install-brew-formulas.sh` script:
+
+`$ ./install-brew-formulas.sh`
+
+This will install brew formulas declared in `FORMULAS` array:
+
+```
+FORMULAS=(
+    bat
+    diff-so-fancy
+    gradle-completion
+    hstr
+    htop
+    httpie
+    jq
+    zsh-autosuggestions
+    zsh-completions
+    zsh-syntax-highlighting
+)
+```
