@@ -64,5 +64,5 @@ setopt SHARE_HISTORY             # share history between all sessions.
 bindkey -s "\C-r" "\eqhstr\n"    # bind hstr to Ctrl-r (for Vi mode check doc)
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/valternep/.sdkman"
-[[ -s "/Users/valternep/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/valternep/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="~/.sdkman"
+[[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
