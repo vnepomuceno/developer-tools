@@ -22,8 +22,7 @@ FORMULAS=(
 
 brew_install_formula()
 {
-    echo $(date) "-> Installing ${bold}$1${normal} ${LDNG}"
-    printf ${LDNG}
+    echo $(date) "-> Installing ${bold}$1${normal}"
     if brew ls --versions $1 > /dev/null; then
         echo $(date) "-> ${GREEN}[OK]${RST} ${bold}$1${normal} is already installed\n"
     else

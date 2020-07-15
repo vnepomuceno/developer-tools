@@ -26,7 +26,7 @@ Use the command `brew install <formula>` to install the following formulas:
 
 In the root of the project run the `install-brew-formulas.sh` script:
 
-`$ ./install-brew-formulas.sh`
+`$ terminal/install-brew-formulas.sh`
 
 This will install brew formulas declared in `FORMULAS` array:
 
