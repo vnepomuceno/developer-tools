@@ -1,3 +1,7 @@
+# SDKMAN!
+
+[SDKMAN!](https://sdkman.io/install) is a tool for managing parallel versions of multiple Software Development Kits on most Unix based systems. It provides a convenient Command Line Interface (CLI) and API for installing, switching, removing and listing Candidates.
+
 # Brew Formulas
 
 Install `brew` from the [homepage](https://brew.sh), if you haven't yet.
