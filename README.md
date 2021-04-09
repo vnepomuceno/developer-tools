@@ -2,9 +2,11 @@
 
 This project has the following sections:
 
+* [Dotfiles](dotfiles)
 * [Firefox](firefox/README.md)
 * [Git](git/README.md)
 * [Intellij](intellij/README.md)
+* [Scripts](scripts)
 * [Terminal](terminal/README.md)
 
 ## Bootstrap Mac Workstation From Scratch
@@ -25,7 +27,7 @@ This project has the following sections:
 From this repository root directory run the command:
 
 ```
-./terminal/install-brew-formulas.sh
+./scripts/install-brew-formulas.sh
 ```
 
 ### IDE Checklist
