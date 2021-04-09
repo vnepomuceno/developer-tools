@@ -1,30 +1,5 @@
-#################
-# POWERLEVEL10K #
-#################
-
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-#######
-# RVM #
-#######
-
-## Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-###########
-# ALIASES #
-###########
-
+# ALIASES
+# ================================================================
 alias ls="ls -FG"
 alias la="ls -lahFG"
 alias grep="grep --color=auto -iRnH"
@@ -37,20 +12,38 @@ alias gum="git checkout master && git pull"
 alias guq="git checkout qa && git pull"
 alias grep="ggrep --color=auto"
 
-##############################
-# TERMINAL PLUGINS & CONFIGS #
-##############################
 
-# Auto suggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# PYTHON CONFIGURATION
+# ================================================================
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export SYSTEM_VERSION_COMPAT=1  # Hack for fixing errors building wheels
 
-# Escape special characters (^)
-setopt NO_NOMATCH
 
-# HSTR configuration
-alias hh=hstr                    # hh to be alias for hstr
+# RUBY CONFIGURATION
+# ================================================================
+export PATH="$PATH:$HOME/.rvm/bin"
+
+
+# ZSH CONFIGURATION
+# ================================================================
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
+# OH MY ZSH CONFIGURATION
+# ================================================================
+export ZSH=".oh-my-zsh"
+ZSH_THEME="jnrowe"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+
+
+# HSTR CONFIGURATION
+# ================================================================
+export HSTR_CONFIG=raw-history-view,hicolor,blacklist
 export HISTFILE=~/.zsh_history   # ensure history file visibility
-export HSTR_CONFIG=hicolor       # get more colors
 export HISTSIZE=10000000         # define history limit
 export SAVEHIST=$HISTSIZE        # set history limit
 setopt HIST_EXPIRE_DUPS_FIRST    # expire duplicate entries first when trimming history.
@@ -61,8 +54,11 @@ setopt HIST_SAVE_NO_DUPS         # don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # don't execute immediately upon history expansion.
 setopt SHARE_HISTORY             # share history between all sessions.
+setopt NO_NOMATCH                # escape special characters (^)
 bindkey -s "\C-r" "\eqhstr\n"    # bind hstr to Ctrl-r (for Vi mode check doc)
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+
+# SDKMAN (THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!)
+# ================================================================
 export SDKMAN_DIR="~/.sdkman"
 [[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
