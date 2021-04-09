@@ -14,6 +14,7 @@ pull_git_repositories()
     echo $BREAKER
     echo $(date) "==> Updating git repository '${bold}$GIT_REPO${normal}'"
     cd $GIT_REPO
+    git checkout master
     git pull
     cd ..
     echo "\n\n" $(date) "${bold}==> ${GREEN}[OK]${RST} Finished pulling git repository"
