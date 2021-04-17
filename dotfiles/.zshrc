@@ -13,6 +13,18 @@ alias guq="git checkout qa && git pull"
 alias grep="ggrep --color=auto"
 
 
+# OH MY ZSH CONFIGURATION
+# ================================================================
+plugins=(git)
+ZSH_THEME="jnrowe"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+
+export ZSH=".oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
+source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
 # PYTHON CONFIGURATION
 # ================================================================
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -26,18 +38,6 @@ export SYSTEM_VERSION_COMPAT=1  # Hack for fixing errors building wheels
 # RUBY CONFIGURATION
 # ================================================================
 export PATH="$PATH:$HOME/.rvm/bin"
-
-
-# ZSH CONFIGURATION
-# ================================================================
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-
-# OH MY ZSH CONFIGURATION
-# ================================================================
-export ZSH=".oh-my-zsh"
-ZSH_THEME="jnrowe"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 
 # HSTR CONFIGURATION
