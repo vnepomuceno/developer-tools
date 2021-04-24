@@ -21,8 +21,19 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 export ZSH=".oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Syntax Highlighting
+source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic
+}
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
 
 
 # PYTHON CONFIGURATION
