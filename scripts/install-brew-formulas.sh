@@ -9,12 +9,15 @@ success=1
 
 FORMULAS=(
     bat
+    ctop
     diff-so-fancy
+    fzf
     gradle-completion
     hstr
     htop
     httpie
     jq
+    oh-my-zsh
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
