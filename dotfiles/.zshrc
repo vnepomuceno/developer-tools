@@ -1,6 +1,6 @@
 # ALIASES
 # ================================================================
-alias ls="ls -FG"
+alias ls="colorls"
 alias la="ls -lahFG"
 alias grep="grep --color=auto -iRnH"
 alias gp="git pull"
@@ -11,16 +11,25 @@ alias gdc="git diff --cached"
 alias gum="git checkout master && git pull"
 alias guq="git checkout qa && git pull"
 alias grep="ggrep --color=auto"
+alias fpath="echo $PATH | sed -r 's/[:]+/\n/g' | fzf"
+alias pyv="pyenv versions"
+alias env="env | fzf"
+alias zshrc="cat ~/.zshrc | fzf"
+alias venvroot="echo /Users/valternepomuceno/Library/Caches/pypoetry/virtualenvs"
+alias venvs="ls /Users/valternepomuceno/Library/Caches/pypoetry/virtualenvs"
 
 
-# OH MY ZSH CONFIGURATION
+# ZSH CONFIGURATION
 # ================================================================
-plugins=(git)
+plugins=(git fzf)
 ZSH_THEME="jnrowe"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
-export ZSH=".oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_CACHE_DIR="$ZSH/cache"
+export ZSH_CUSTOM="$ZSH/custom"
 source $ZSH/oh-my-zsh.sh
+source $ZSH/custom/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Syntax Highlighting

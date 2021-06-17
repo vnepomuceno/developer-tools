@@ -20,6 +20,7 @@ Use the command `brew install <formula>` to install the following formulas:
 * [httpie](https://httpie.org), a command line HTTP client
 * [jq](https://stedolan.github.io/jq), lightweight and flexible command-line JSON processor
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), a framework for managing your zsh configuration
+* [ripgrep](https://github.com/BurntSushi/ripgrep), ripgrep recursively searches directories for a regex pattern while respecting your gitignore
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), fish-like fast / unobtrusive autosuggestions for zsh
 * [zsh-completions](https://github.com/zsh-users/zsh-completions), additional completion definitions for zsh
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), fish-like syntax highlighting for zsh

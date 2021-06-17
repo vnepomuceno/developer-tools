@@ -17,7 +17,7 @@ FORMULAS=(
     htop
     httpie
     jq
-    oh-my-zsh
+    ripgrep
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
@@ -45,7 +45,7 @@ do
 done
 
 if [ $success -eq 0 ]; then
-    echo $(date) "-> ${RED}${bold}[FAILURE]${normal}${RST}${RED} Could not install all formulas"
+    echo $(date) "-> ${RED}${bold}[WARNING]${normal}${RST}${RED} Could not install all formulas"
 else
     echo $(date) "-> ${GREEN}${bold}[SUCCESS]${normal}${RST}${GREEN} Finished installing all formulas successfully"
 fi
