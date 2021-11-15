@@ -27,7 +27,8 @@ set -g @continuum-boot 'on'
 set -g base-index 1           # start windows numbering at 1
 
 # Dracula theme
-set -g @dracula-plugins "cpu-usage ram-usage"
+set -g @dracula-plugins "cpu-usage ram-usage weather time"
+set -g @dracula-weather-colors "light_purple dark_gray"
 set -g @dracula-show-powerline true
 set -g @dracula-show-left-icon session
 set -g @dracula-border-contrast true
