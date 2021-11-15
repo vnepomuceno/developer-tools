@@ -13,6 +13,7 @@ Use the command `brew install <formula>` to install the following formulas:
 * [bat](https://github.com/sharkdp/bat), a cat clone with wings
 * [ctop](https://github.com/bcicen/ctop), top-like interface for container metrics 
 * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy), good-lookin' diffs
+* [exa](https://github.com/ogham/exa)
 * [fzf](https://github.com/junegunn/fzf), a command-line fuzzy finder 
 * [gradle-completion](https://github.com/gradle/gradle-completion), bash and zsh completion support for gradle
 * [hstr](https://github.com/dvorka/hstr), bash and zsh shell history suggest box
