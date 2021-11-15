@@ -1,24 +1,3 @@
-# ALIASES
-# ================================================================
-alias ls="colorls"
-alias la="ls -lahFG"
-alias grep="grep --color=auto -iRnH"
-alias gp="git pull"
-alias gs="git s"
-alias gt="git tr"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gum="git checkout master && git pull"
-alias guq="git checkout qa && git pull"
-alias grep="ggrep --color=auto"
-alias fpath="echo $PATH | sed -r 's/[:]+/\n/g' | fzf"
-alias pyv="pyenv versions"
-alias env="env | fzf"
-alias zshrc="cat ~/.zshrc | fzf"
-alias venvroot="echo /Users/valternepomuceno/Library/Caches/pypoetry/virtualenvs"
-alias venvs="ls /Users/valternepomuceno/Library/Caches/pypoetry/virtualenvs"
-
-
 # ZSH CONFIGURATION
 # ================================================================
 plugins=(git fzf)
@@ -43,6 +22,27 @@ pastefinish() {
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
+
+
+# ALIASES
+# ================================================================
+alias ls="exa"
+alias la="ls -lahFG"
+alias gp="git pull"
+alias gs="git s"
+alias gt="git tr"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gum="git checkout master && git pull"
+alias guq="git checkout qa && git pull"
+alias fpath="echo $PATH | sed -r 's/[:]+/\n/g' | fzf"
+alias pyv="pyenv versions"
+alias pyinstall="pyenv install -l | fzf | xargs pyenv install"
+alias env="env | fzf"
+alias zshrc="cat ~/.zshrc | fzf"
+alias venvroot="echo /Users/valternepomuceno/Library/Caches/pypoetry/virtualenvs"
+alias venvs="ls /Users/valternepomuceno/Library/Caches/pypoetry/virtualenvs"
+alias zshalias="cat ~/.zshrc | grep -v zshalias | grep alias"
 
 
 # PYTHON CONFIGURATION
