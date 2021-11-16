@@ -80,5 +80,5 @@ bindkey -s "\C-r" "\eqhstr\n"    # bind hstr to Ctrl-r (for Vi mode check doc)
 
 # SDKMAN (THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!)
 # ================================================================
-export SDKMAN_DIR="~/.sdkman"
-[[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
