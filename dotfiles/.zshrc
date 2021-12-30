@@ -26,7 +26,7 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 # ALIASES
 # ================================================================
-alias ls="exa"
+alias ls="exa --icons"
 alias la="ls -lahFG"
 alias gp="git pull"
 alias gs="git s"
@@ -43,6 +43,8 @@ alias zshrc="cat ~/.zshrc | fzf"
 alias venvroot="echo /Users/valternepomuceno/Library/Caches/pypoetry/virtualenvs"
 alias venvs="ls /Users/valternepomuceno/Library/Caches/pypoetry/virtualenvs"
 alias zshalias="cat ~/.zshrc | grep -v zshalias | grep alias"
+alias git_this="git rev-parse --abbrev-ref HEAD"
+alias jpl="cd ~/Workspace && jupyter lab"
 
 
 # PYTHON CONFIGURATION
