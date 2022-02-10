@@ -47,6 +47,13 @@ alias git_this="git rev-parse --abbrev-ref HEAD"
 alias jpl="cd ~/Workspace && jupyter lab"
 
 
+# HOMEBREW
+# ================================================================
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+export PATH="/usr/local/opt/bzip2/bin:$PATH"
+
+
 # PYTHON CONFIGURATION
 # ================================================================
 if command -v pyenv 1>/dev/null 2>&1; then
