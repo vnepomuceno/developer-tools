@@ -1,0 +1,14 @@
+{
+  "editor.fontFamily": "'Iosevka', 'Fira Code', 'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.lineHeight": 20,
+  "files.autoSave": "afterDelay",
+  "editor.renderWhitespace": "all",
+  "workbench.activityBar.iconClickBehavior": "focus",
+  "workbench.colorCustomizations": {},
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Dracula",
+  "editor.fontLigatures": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "ruby.intellisense": "rubyLocate"
+}
